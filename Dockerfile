@@ -7,5 +7,5 @@ RUN npm run build
 FROM node:14.8-alpine
 RUN npm install -g serve
 WORKDIR /app
-COPY --from_builder /app/build .
+COPY --from=builder /app/build .
 CMD ["serve", "-s", "."]
