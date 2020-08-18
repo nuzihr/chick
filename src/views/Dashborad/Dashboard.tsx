@@ -60,7 +60,7 @@ const Mmr = (classes: any) => {
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago(嘘です)
+                <AccessTime /> updated X minutes ago
               </div>
             </CardFooter>
           </Card>
@@ -105,7 +105,7 @@ const KillRatio = (classes: any) => {
             </CardBody>
             <CardFooter chart>
               <div className={classes.stats}>
-                <AccessTime /> updated 4 minutes ago(嘘です)
+                <AccessTime /> updated X minutes ago
               </div>
             </CardFooter>
           </Card>

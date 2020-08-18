@@ -69,7 +69,7 @@ export default function CustomList() {
           <ListItem operator="Amaru" img={amaru}/>
           <ListItem operator="Kali" img={kali}/>
           <ListItem operator="Iana" img={iana}/>
-          <ListItem operator="Ace" img={ace}/>
+          {/*<ListItem operator="Ace" img={ace}/>*/}
         </List>
       </div>
   );

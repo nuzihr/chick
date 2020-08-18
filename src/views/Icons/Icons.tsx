@@ -60,7 +60,7 @@ const OperatorScore = (classes: any) => {
   const url = `https://r6s.nuzihr.dev/api/operators/${operator}`
   const fetchFunc = async () => (await fetch(url)).json();
   const initResult = prefetch(fetchFunc, null);
-  const [result, setResult] = useState(initResult);
+  const [result] = useState(initResult);
   return (
     <Card chart>
       <CardHeader color="warning">

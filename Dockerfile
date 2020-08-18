@@ -1,11 +1,11 @@
-FROM node:14.8-alpine
-
-WORKDIR /usr/src/app
-
-COPY package*.json ./
+FROM node:14.8-alpine AS builder
+WORKDIR /app
+COPY . .
 RUN npm install
-
-COPY . ./
 RUN npm run build
 
-CMD [ "npm", "run", "start" ]
+FROM node:14.8-alpine
+RUN npm install -g serve
+WORKDIR /app
+COPY --from_builder /app/build .
+CMD ["serve", "-s", "."]
