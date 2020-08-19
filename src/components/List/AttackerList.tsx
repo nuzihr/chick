@@ -60,7 +60,7 @@ export default function CustomList() {
           <ListItem operator="Ying" img={ying}/>
           <ListItem operator="Zofia" img={zofia}/>
           <ListItem operator="Dokkaebi" img={dokkaebi}/>
-          <ListItem operator="Liion" img={lion}/>
+          <ListItem operator="Lion" img={lion}/>
           <ListItem operator="Finka" img={finka}/>
           <ListItem operator="Marvelick" img={maverick}/>
           <ListItem operator="Nomad" img={nomad}/>
