@@ -7,16 +7,16 @@ import styles from "../../assets/jss/chick/components/typographyStyle";
 
 const useStyles = makeStyles(styles);
 
-export default function Danger(props: { children: any; }) {
+export default function Danger(props: { children: any }) {
   const classes = useStyles();
   const { children } = props;
   return (
-    <div className={classes.defaultFontStyle + " " + classes.dangerText}>
+    <div className={`${classes.defaultFontStyle} ${classes.dangerText}`}>
       {children}
     </div>
   );
 }
 
 Danger.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

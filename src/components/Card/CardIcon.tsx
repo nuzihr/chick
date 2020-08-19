@@ -12,15 +12,20 @@ import styles from "../../assets/jss/chick/components/cardIconStyle";
 
 const useStyles = makeStyles(styles);
 
-export interface Props { [x: string]: any; className?: any; children?: any; color?: string; }
+export interface Props {
+  [x: string]: any;
+  className?: any;
+  children?: any;
+  color?: string;
+}
 
 export default function CardIcon(props: Props) {
   const classes: { [key: string]: string } = useStyles();
   const { className, children, color, ...rest } = props;
   const cardIconClasses = classNames({
     [classes.cardIcon]: true,
-    [classes[color + "CardHeader"]]: color,
-    [className]: className !== undefined
+    [classes[`${color}CardHeader`]]: color,
+    [className]: className !== undefined,
   });
   return (
     <div className={cardIconClasses} {...rest}>
@@ -37,7 +42,7 @@ CardIcon.propTypes = {
     "danger",
     "info",
     "primary",
-    "rose"
+    "rose",
   ]),
-  children: PropTypes.node
+  children: PropTypes.node,
 };

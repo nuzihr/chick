@@ -1,3 +1,4 @@
+import { createStyles, Theme } from "@material-ui/core";
 import {
   warningColor,
   primaryColor,
@@ -6,20 +7,20 @@ import {
   infoColor,
   roseColor,
   grayColor,
-  defaultFont
+  defaultFont,
 } from "../../chick";
-import {createStyles, Theme} from "@material-ui/core";
 
-const listStyle = (theme: Theme) => createStyles({
-  flexCell: {
-    display: 'flex',
-    flexDirection: 'row',
-    padding: 0,
-    button: true,
-    flexWrap: 'wrap',
-    justifyContent: 'center',
-    overflow: 'hidden'
-  }
-});
+const listStyle = (theme: Theme) =>
+  createStyles({
+    flexCell: {
+      display: "flex",
+      flexDirection: "row",
+      padding: 0,
+      button: true,
+      flexWrap: "wrap",
+      justifyContent: "center",
+      overflow: "hidden",
+    },
+  });
 
 export default listStyle;

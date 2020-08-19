@@ -12,7 +12,13 @@ import styles from "../../assets/jss/chick/components/cardBodyStyle";
 
 const useStyles = makeStyles(styles);
 
-export interface Props { [x: string]: any; className?: any; children?: any; plain?: any; profile?: any; }
+export interface Props {
+  [x: string]: any;
+  className?: any;
+  children?: any;
+  plain?: any;
+  profile?: any;
+}
 
 export default function CardBody(props: Props) {
   const classes: { [key: string]: string } = useStyles();
@@ -21,7 +27,7 @@ export default function CardBody(props: Props) {
     [classes.cardBody]: true,
     [classes.cardBodyPlain]: plain,
     [classes.cardBodyProfile]: profile,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   return (
     <div className={cardBodyClasses} {...rest}>
@@ -34,5 +40,5 @@ CardBody.propTypes = {
   className: PropTypes.string,
   plain: PropTypes.bool,
   profile: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
 };

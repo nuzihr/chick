@@ -7,13 +7,16 @@ import Grid from "@material-ui/core/Grid";
 
 const styles = {
   grid: {
-    padding: "0 15px !important"
-  }
+    padding: "0 15px !important",
+  },
 };
 
 const useStyles = makeStyles(styles);
 
-export interface Props { [x: string]: any; children: any; }
+export interface Props {
+  [x: string]: any;
+  children: any;
+}
 
 export default function GridItem(props: Props) {
   const classes = useStyles();
@@ -26,5 +29,5 @@ export default function GridItem(props: Props) {
 }
 
 GridItem.propTypes = {
-  children: PropTypes.node
+  children: PropTypes.node,
 };

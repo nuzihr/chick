@@ -12,7 +12,14 @@ import styles from "../../assets/jss/chick/components/cardStyle";
 
 const useStyles = makeStyles(styles);
 
-export interface Props { [x: string]: any; className?: any; children?: any; plain?: any; profile?: any; chart?: any; }
+export interface Props {
+  [x: string]: any;
+  className?: any;
+  children?: any;
+  plain?: any;
+  profile?: any;
+  chart?: any;
+}
 
 export default function Card(props: Props) {
   const classes = useStyles();
@@ -22,7 +29,7 @@ export default function Card(props: Props) {
     [classes.cardPlain]: plain,
     [classes.cardProfile]: profile,
     [classes.cardChart]: chart,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   return (
     <div className={cardClasses} {...rest}>
@@ -36,5 +43,5 @@ Card.propTypes = {
   plain: PropTypes.bool,
   profile: PropTypes.bool,
   chart: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
 };

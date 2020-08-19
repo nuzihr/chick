@@ -12,18 +12,26 @@ import styles from "../../assets/jss/chick/components/cardHeaderStyle";
 
 const useStyles = makeStyles(styles);
 
-export interface Props { [x: string]: any; className?: any; children?: any; color?: any; plain?: any; stats?: any; icon?: any; }
+export interface Props {
+  [x: string]: any;
+  className?: any;
+  children?: any;
+  color?: any;
+  plain?: any;
+  stats?: any;
+  icon?: any;
+}
 
 export default function CardHeader(props: Props) {
   const classes: { [key: string]: string } = useStyles();
   const { className, children, color, plain, stats, icon, ...rest } = props;
   const cardHeaderClasses = classNames({
     [classes.cardHeader]: true,
-    [classes[color + "CardHeader"]]: color,
+    [classes[`${color}CardHeader`]]: color,
     [classes.cardHeaderPlain]: plain,
     [classes.cardHeaderStats]: stats,
     [classes.cardHeaderIcon]: icon,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   return (
     <div className={cardHeaderClasses} {...rest}>
@@ -40,10 +48,10 @@ CardHeader.propTypes = {
     "danger",
     "info",
     "primary",
-    "rose"
+    "rose",
   ]),
   plain: PropTypes.bool,
   stats: PropTypes.bool,
   icon: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
 };

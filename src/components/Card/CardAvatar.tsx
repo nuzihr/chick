@@ -12,7 +12,13 @@ import styles from "../../assets/jss/chick/components/cardAvatarStyle";
 
 const useStyles = makeStyles(styles);
 
-export interface Props { [x: string]: any; children: any; className: any; plain: any; profile: any; }
+export interface Props {
+  [x: string]: any;
+  children: any;
+  className: any;
+  plain: any;
+  profile: any;
+}
 
 export default function CardAvatar(props: Props) {
   const classes = useStyles();
@@ -21,7 +27,7 @@ export default function CardAvatar(props: Props) {
     [classes.cardAvatar]: true,
     [classes.cardAvatarProfile]: profile,
     [classes.cardAvatarPlain]: plain,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   return (
     <div className={cardAvatarClasses} {...rest}>
@@ -34,5 +40,5 @@ CardAvatar.propTypes = {
   children: PropTypes.node.isRequired,
   className: PropTypes.string,
   profile: PropTypes.bool,
-  plain: PropTypes.bool
+  plain: PropTypes.bool,
 };

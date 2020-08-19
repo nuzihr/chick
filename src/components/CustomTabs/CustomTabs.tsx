@@ -17,7 +17,12 @@ import styles from "../../assets/jss/chick/components/customTabsStyle";
 
 const useStyles = makeStyles(styles);
 
-export interface Props { headerColor?: string; plainTabs?: any; tabs: any[]; title: string; }
+export interface Props {
+  headerColor?: string;
+  plainTabs?: any;
+  tabs: any[];
+  title: string;
+}
 
 export default function CustomTabs(props: Props) {
   const [value, setValue] = React.useState(0);
@@ -39,16 +44,16 @@ export default function CustomTabs(props: Props) {
           classes={{
             root: classes.tabsRoot,
             indicator: classes.displayNone,
-            scrollButtons: classes.displayNone
+            scrollButtons: classes.displayNone,
           }}
           variant="scrollable"
           scrollButtons="auto"
         >
           {tabs.map((prop, key) => {
-            var icon = {};
+            let icon = {};
             if (prop.tabIcon) {
               icon = {
-                icon: <prop.tabIcon />
+                icon: <prop.tabIcon />,
               };
             }
             return (
@@ -56,7 +61,7 @@ export default function CustomTabs(props: Props) {
                 classes={{
                   root: classes.tabRootButton,
                   selected: classes.tabSelected,
-                  wrapper: classes.tabWrapper
+                  wrapper: classes.tabWrapper,
                 }}
                 key={key}
                 label={prop.tabName}
@@ -85,16 +90,16 @@ CustomTabs.propTypes = {
     "danger",
     "info",
     "primary",
-    "rose"
+    "rose",
   ]),
   title: PropTypes.string,
   tabs: PropTypes.arrayOf(
     PropTypes.shape({
       tabName: PropTypes.string.isRequired,
       tabIcon: PropTypes.object,
-      tabContent: PropTypes.node.isRequired
+      tabContent: PropTypes.node.isRequired,
     })
   ),
   rtlActive: PropTypes.bool,
-  plainTabs: PropTypes.bool
+  plainTabs: PropTypes.bool,
 };

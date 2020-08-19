@@ -12,7 +12,15 @@ import styles from "../../assets/jss/chick/components/cardFooterStyle";
 
 const useStyles = makeStyles(styles);
 
-export interface Props { [x: string]: any; className?: any; children?: any; plain?: any; profile?: any; stats?: any; chart?: any; }
+export interface Props {
+  [x: string]: any;
+  className?: any;
+  children?: any;
+  plain?: any;
+  profile?: any;
+  stats?: any;
+  chart?: any;
+}
 
 export default function CardFooter(props: Props) {
   const classes = useStyles();
@@ -23,7 +31,7 @@ export default function CardFooter(props: Props) {
     [classes.cardFooterProfile]: profile,
     [classes.cardFooterStats]: stats,
     [classes.cardFooterChart]: chart,
-    [className]: className !== undefined
+    [className]: className !== undefined,
   });
   return (
     <div className={cardFooterClasses} {...rest}>
@@ -38,5 +46,5 @@ CardFooter.propTypes = {
   profile: PropTypes.bool,
   stats: PropTypes.bool,
   chart: PropTypes.bool,
-  children: PropTypes.node
+  children: PropTypes.node,
 };
