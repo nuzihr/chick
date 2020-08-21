@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import { List } from "@material-ui/core";
 import styles from "../../assets/jss/chick/components/listStyle";
-import ListItem from "./ListItem";
+import ListItem from "./OperatorListItem";
 
 import ace from "../../assets/img/r6s/ace.svg";
 import amaru from "../../assets/img/r6s/amaru.svg";

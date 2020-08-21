@@ -9,6 +9,7 @@ import {
   ResponsiveContainer,
   Tooltip,
   Legend,
+  Label,
 } from "recharts";
 // @material-ui/core
 import { makeStyles } from "@material-ui/core/styles";
@@ -32,7 +33,6 @@ const Mmr = (classes: any) => {
     (await fetch("https://r6s.nuzihr.dev/api/seasons/mmr")).json();
   const initialResult = prefetch(fetchFunc, null);
   const [result] = useState(initialResult);
-  console.log(result);
   return (
     <Card chart>
       <CardHeader color="warning">
@@ -45,7 +45,7 @@ const Mmr = (classes: any) => {
               <XAxis dataKey="name" />
               <YAxis
                 domain={["dataMin", "dataMax"]}
-                ticks={[1500, 2000, 2500, 3000, 3500]}
+                ticks={[1000, 1500, 2000, 2500, 3000, 3500]}
               />
               <Tooltip />
               <Legend />
@@ -99,7 +99,14 @@ const KillRatio = (classes: any) => {
               <YAxis
                 domain={["dataMin", "dataMax"]}
                 ticks={[0, 0.5, 1, 1.5, 2]}
-              />
+              >
+                <Label
+                  angle={-90}
+                  value="シーズン内キルレ"
+                  position="insideLeft"
+                  style={{ textAnchor: "end" }}
+                />
+              </YAxis>
               <Tooltip />
               <Legend />
               <CartesianGrid stroke="#eee" strokeDasharray="5 5" />

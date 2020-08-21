@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 // core components
 import { List } from "@material-ui/core";
 import styles from "../../assets/jss/chick/components/listStyle";
-import ListItem from "./ListItem";
+import ListItem from "./OperatorListItem";
 
 import alibi from "../../assets/img/r6s/alibi.svg";
 import bandit from "../../assets/img/r6s/bandit.svg";

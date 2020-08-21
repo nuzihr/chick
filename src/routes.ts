@@ -1,7 +1,9 @@
 import Dashboard from "@material-ui/icons/Dashboard";
 import SupervisorAccountIcon from "@material-ui/icons/SupervisorAccount";
+import FlashOnIcon from "@material-ui/icons/FlashOn";
 import DashboardPage from "./views/Dashborad/Dashboard";
 import Operators from "./views/Operators/Operators";
+import Weapons from "./views/Weapons/Weapons";
 
 const dashboardRoutes = [
   {
@@ -16,6 +18,13 @@ const dashboardRoutes = [
     name: "Operators",
     icon: SupervisorAccountIcon,
     component: Operators,
+    layout: "/app",
+  },
+  {
+    path: "/weapons",
+    name: "Weapons",
+    icon: FlashOnIcon,
+    component: Weapons,
     layout: "/app",
   },
 ];

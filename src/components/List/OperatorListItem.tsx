@@ -1,7 +1,7 @@
 import React from "react";
 import { Avatar, ListItem, ListItemAvatar } from "@material-ui/core";
 
-export default function CustomListItem(props: {
+export default function OperatorListItem(props: {
   operator: string;
   img: string;
 }) {
