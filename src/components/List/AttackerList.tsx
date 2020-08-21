@@ -65,11 +65,11 @@ export default function CustomList() {
         <ListItem operator="Maverick" img={maverick} />
         <ListItem operator="Nomad" img={nomad} />
         <ListItem operator="Gridlock" img={gridlock} />
-        <ListItem operator="Nakk" img={nokk} />
+        <ListItem operator="Nøkk" img={nokk} />
         <ListItem operator="Amaru" img={amaru} />
         <ListItem operator="Kali" img={kali} />
         <ListItem operator="Iana" img={iana} />
-        {/* <ListItem operator="Ace" img={ace}/> */}
+        <ListItem operator="Ace" img={ace} />
       </List>
     </div>
   );

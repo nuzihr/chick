@@ -33,6 +33,7 @@ import valkyrie from "../../assets/img/r6s/valkyrie.svg";
 import vigil from "../../assets/img/r6s/vigil.svg";
 import wamai from "../../assets/img/r6s/wamai.svg";
 import warden from "../../assets/img/r6s/warden.svg";
+import melusi from "../../assets/img/r6s/melusi.svg";
 
 const useStyles = makeStyles(styles);
 
@@ -68,6 +69,7 @@ export default function CustomList() {
         <ListItem operator="Goyo" img={goyo} />
         <ListItem operator="Wamai" img={wamai} />
         <ListItem operator="Oryx" img={oryx} />
+        <ListItem operator="Melusi" img={melusi} />
       </List>
     </div>
   );
