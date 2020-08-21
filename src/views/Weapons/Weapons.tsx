@@ -39,7 +39,7 @@ const Scatters = ({ result }: { result: any }) => {
         <YAxis
           dataKey="y"
           type="number"
-          domain={[0, 2]}
+          domain={[0, 100]}
           name="ヘッドショットキル率"
         >
           <Label
