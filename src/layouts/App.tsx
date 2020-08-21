@@ -16,9 +16,9 @@ import routes from "../routes";
 import styles from "../assets/jss/chick/layouts/appStyle";
 
 // @ts-ignore
-import bgImage from "../assets/img/sidebar.jpg";
+import bgImage from "../assets/img/sidebar.svg";
 // @ts-ignore
-import logo from "../assets/img/logo.png";
+import logo from "../assets/img/logo.svg";
 
 let ps: PerfectScrollbar;
 
